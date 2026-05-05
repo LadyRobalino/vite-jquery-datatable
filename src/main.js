@@ -2,7 +2,7 @@ import './style.css';
 import DataTable from 'datatables.net-dt';
 import 'datatables.net-dt/css/dataTables.dataTables.css';
 
-const API_URL = "https://raw.githubusercontent.com/PlataformasWeb-P-AA2026/api-demo/main/db.json"
+const API_URL = "https://raw.githubusercontent.com/vega/vega/master/docs/data/cars.json"
 
 async function cargarDatos() {
   try {
@@ -17,10 +17,10 @@ async function cargarDatos() {
     new DataTable('#tabla-posts', {
       data: datos,
       columns: [
-        { data: 'AMIE' },
-        { data: 'Nombre-Educativa' },
-        { data: 'Canton' },
-        { data: 'Parroquia' }
+        { data: 'Name' },
+        { data: 'Miles_per_Gallon' },
+        { data: 'Year' },
+        { data: 'Origin' }
       ],
       pageLength: 10,
       language: {
